@@ -23,7 +23,8 @@ void Union(int a, int b)
     {
         if(Size[a] < Size[b]) swap(a, b);
         parent[b] = a;
-        Size[a] += b;
+        Size[a] += Size[b];
+        Size[b] = Size[a];
     }
 }
 void kruskalsAlgo()

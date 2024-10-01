@@ -33,6 +33,7 @@ void Union(int a, int b)
         parent[b] = a;
         // after connecting set b to a, the size of set 'a' is increased by a+b 
         Size[a] += Size[b];
+        Size[b] = Size[a];
     }
 }
 int main()
